@@ -141,6 +141,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="jNE-Aj-zQP" kind="show" identifier="read_sg" id="I1b-C3-I5x"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j4z-GX-NAn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,8 +167,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KxT-Ga-t3R">
-                                <rect key="frame" x="16" y="388" width="250" height="250"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KxT-Ga-t3R">
+                                <rect key="frame" x="16" y="390" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="bxg-w9-DeW"/>
                                     <constraint firstAttribute="height" constant="250" id="jq3-sv-Fcl"/>
@@ -191,7 +194,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyK-BU-cv9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080.1526717557251" y="0.70422535211267612"/>
+            <point key="canvasLocation" x="140" y="706"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="T78-Vc-UPK">
+            <objects>
+                <viewController id="jNE-Aj-zQP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="szy-jf-BY7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RaU-2B-iym"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gZ5-00-bLp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GJY-xT-6Hk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1094" y="5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q8F-4H-aoX">
