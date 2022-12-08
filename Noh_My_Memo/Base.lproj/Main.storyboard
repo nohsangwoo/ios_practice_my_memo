@@ -86,8 +86,11 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="글의 내용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFo-Zc-SgL">
-                                            <rect key="frame" x="86" y="46" width="196" height="14.333333333333336"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="글의 내용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFo-Zc-SgL">
+                                            <rect key="frame" x="88.333333333333329" y="46" width="204.33333333333337" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="ug1-tw-yjX"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -111,6 +114,8 @@
                                         <constraint firstItem="XR9-aG-URR" firstAttribute="leading" secondItem="Met-1o-iFb" secondAttribute="trailing" constant="7.6699999999999999" id="E7P-yj-LfD"/>
                                         <constraint firstItem="XR9-aG-URR" firstAttribute="top" secondItem="PKr-jP-wp3" secondAttribute="top" constant="20" symbolic="YES" id="Ibr-qg-vAp"/>
                                         <constraint firstItem="Met-1o-iFb" firstAttribute="leading" secondItem="PKr-jP-wp3" secondAttribute="leading" constant="20" symbolic="YES" id="LEG-mk-dvg"/>
+                                        <constraint firstItem="VFo-Zc-SgL" firstAttribute="leading" secondItem="Met-1o-iFb" secondAttribute="trailing" constant="10" id="NBQ-a9-0CH"/>
+                                        <constraint firstAttribute="trailing" secondItem="VFo-Zc-SgL" secondAttribute="trailing" constant="70" id="TG6-2P-fyo"/>
                                         <constraint firstItem="Met-1o-iFb" firstAttribute="top" secondItem="PKr-jP-wp3" secondAttribute="top" constant="20" symbolic="YES" id="meT-JT-NTm"/>
                                         <constraint firstItem="VFo-Zc-SgL" firstAttribute="top" secondItem="XR9-aG-URR" secondAttribute="bottom" constant="5" id="ux6-we-yg2"/>
                                         <constraint firstAttribute="bottom" secondItem="Met-1o-iFb" secondAttribute="bottom" constant="20" symbolic="YES" id="zYc-MX-ka6"/>
