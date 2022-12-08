@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -133,11 +134,33 @@
                             <outlet property="delegate" destination="pZ7-QY-YEg" id="GBa-8o-Ntf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="목록" id="KCb-Yy-KNi"/>
+                    <navigationItem key="navigationItem" title="목록" id="KCb-Yy-KNi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3ht-Qj-Zxz">
+                            <connections>
+                                <segue destination="hZR-rW-TjP" kind="show" id="xAO-Cp-mhS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j4z-GX-NAn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139.69465648854961" y="4.9295774647887329"/>
+        </scene>
+        <!--메모 작성-->
+        <scene sceneID="W4q-Lo-BTv">
+            <objects>
+                <viewController id="hZR-rW-TjP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fBs-xt-fNL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="g09-hR-45z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="메모 작성" id="1eL-KH-NgS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vyK-BU-cv9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081" y="1"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q8F-4H-aoX">
