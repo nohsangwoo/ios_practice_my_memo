@@ -46,10 +46,12 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1970-01-01 19:24:31" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfP-xW-nS9">
-                                            <rect key="frame" x="281" y="3" width="77" height="36"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1970-01-01 19:24:31" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfP-xW-nS9">
+                                            <rect key="frame" x="277.66666666666669" y="10" width="65" height="60"/>
                                             <accessibility key="accessibilityConfiguration" label="날짜"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="65" id="uFT-un-t4D"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -61,7 +63,10 @@
                                         <constraint firstAttribute="trailing" secondItem="SPW-jh-XLW" secondAttribute="trailing" constant="70" id="P3R-Ib-zHl"/>
                                         <constraint firstItem="ttv-Vv-NVT" firstAttribute="leading" secondItem="9Tf-KQ-Dsr" secondAttribute="leading" constant="20" symbolic="YES" id="XeJ-PD-9lp"/>
                                         <constraint firstAttribute="trailing" secondItem="ttv-Vv-NVT" secondAttribute="trailing" constant="70" id="pYg-TA-LHa"/>
+                                        <constraint firstItem="SfP-xW-nS9" firstAttribute="top" secondItem="9Tf-KQ-Dsr" secondAttribute="top" constant="10" id="qfE-CZ-MVo"/>
+                                        <constraint firstAttribute="bottom" secondItem="SfP-xW-nS9" secondAttribute="bottom" constant="10" id="sUh-8W-b6M"/>
                                         <constraint firstItem="ttv-Vv-NVT" firstAttribute="top" secondItem="SPW-jh-XLW" secondAttribute="bottom" constant="5" id="vpU-nI-fhH"/>
+                                        <constraint firstAttribute="trailing" secondItem="SfP-xW-nS9" secondAttribute="trailing" constant="20" symbolic="YES" id="wEf-bn-4xZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
