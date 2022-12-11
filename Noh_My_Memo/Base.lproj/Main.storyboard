@@ -152,7 +152,7 @@
         <!--메모 작성-->
         <scene sceneID="W4q-Lo-BTv">
             <objects>
-                <viewController id="hZR-rW-TjP" sceneMemberID="viewController">
+                <viewController id="hZR-rW-TjP" customClass="MemoFormVC" customModule="Noh_My_Memo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fBs-xt-fNL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,8 +167,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KxT-Ga-t3R">
-                                <rect key="frame" x="16" y="390" width="250" height="250"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KxT-Ga-t3R">
+                                <rect key="frame" x="16" y="388" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="bxg-w9-DeW"/>
                                     <constraint firstAttribute="height" constant="250" id="jq3-sv-Fcl"/>
@@ -187,10 +187,21 @@
                     </view>
                     <navigationItem key="navigationItem" title="메모 작성" id="1eL-KH-NgS">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="2rH-lK-apO"/>
-                            <barButtonItem title="저장" id="sff-xD-1wS"/>
+                            <barButtonItem systemItem="camera" id="2rH-lK-apO">
+                                <connections>
+                                    <action selector="pick:" destination="hZR-rW-TjP" id="StC-Ja-Lh0"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="저장" id="sff-xD-1wS">
+                                <connections>
+                                    <action selector="save:" destination="hZR-rW-TjP" id="HiL-Rf-HAE"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="preview" destination="KxT-Ga-t3R" id="hdo-g5-bqm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyK-BU-cv9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

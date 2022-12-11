@@ -6,6 +6,9 @@
 //
 
 //import Foundation
+
+// 이 파일은 일종의 API res 모킹 데이터 Type이고
+// MemoData라는 객체의 Type이라고 생각 하면 된다.
 import UIKit
 
 
