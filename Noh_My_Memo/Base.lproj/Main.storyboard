@@ -219,13 +219,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pt8-Lf-1di">
-                                <rect key="frame" x="16" y="202" width="250" height="250"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pt8-Lf-1di">
+                                <rect key="frame" x="16" y="195.66666666666663" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="bVw-6f-Vg4"/>
+                                    <constraint firstAttribute="height" constant="250" placeholder="YES" id="qh9-1h-aGT"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RaU-2B-iym"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Pt8-Lf-1di" firstAttribute="leading" secondItem="RaU-2B-iym" secondAttribute="leading" constant="16" id="7I5-74-Cpq"/>
                             <constraint firstItem="RaU-2B-iym" firstAttribute="trailing" secondItem="Ayj-7N-v7i" secondAttribute="trailing" constant="16" id="C0O-Fw-3aB"/>
                             <constraint firstItem="Pt8-Lf-1di" firstAttribute="top" secondItem="B5I-Mj-Rbn" secondAttribute="bottom" constant="20" id="COv-WW-ChR"/>
                             <constraint firstItem="Ayj-7N-v7i" firstAttribute="top" secondItem="RaU-2B-iym" secondAttribute="top" constant="16" id="GAb-7R-qi6"/>
