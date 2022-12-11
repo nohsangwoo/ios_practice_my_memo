@@ -196,35 +196,44 @@
             </objects>
             <point key="canvasLocation" x="140" y="706"/>
         </scene>
-        <!--Title-->
+        <!--상세화면-->
         <scene sceneID="T78-Vc-UPK">
             <objects>
-                <viewController id="jNE-Aj-zQP" sceneMemberID="viewController">
+                <viewController id="jNE-Aj-zQP" userLabel="상세화면" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="szy-jf-BY7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayj-7N-v7i">
-                                <rect key="frame" x="16" y="126" width="361" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayj-7N-v7i">
+                                <rect key="frame" x="16" y="119" width="361" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6L4-EN-U9U"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="내용" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5I-Mj-Rbn">
-                                <rect key="frame" x="16" y="155" width="361" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5I-Mj-Rbn">
+                                <rect key="frame" x="16" y="160" width="361" height="15.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pt8-Lf-1di">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pt8-Lf-1di">
                                 <rect key="frame" x="16" y="202" width="250" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RaU-2B-iym"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RaU-2B-iym" firstAttribute="trailing" secondItem="Ayj-7N-v7i" secondAttribute="trailing" constant="16" id="C0O-Fw-3aB"/>
+                            <constraint firstItem="Pt8-Lf-1di" firstAttribute="top" secondItem="B5I-Mj-Rbn" secondAttribute="bottom" constant="20" id="COv-WW-ChR"/>
+                            <constraint firstItem="Ayj-7N-v7i" firstAttribute="top" secondItem="RaU-2B-iym" secondAttribute="top" constant="16" id="GAb-7R-qi6"/>
+                            <constraint firstItem="Ayj-7N-v7i" firstAttribute="leading" secondItem="RaU-2B-iym" secondAttribute="leading" constant="16" id="Oc5-rr-H9z"/>
+                            <constraint firstItem="B5I-Mj-Rbn" firstAttribute="top" secondItem="Ayj-7N-v7i" secondAttribute="bottom" constant="20" id="g5B-U6-DuQ"/>
+                            <constraint firstItem="RaU-2B-iym" firstAttribute="trailing" secondItem="B5I-Mj-Rbn" secondAttribute="trailing" constant="16" id="jab-ks-nAP"/>
+                            <constraint firstItem="B5I-Mj-Rbn" firstAttribute="leading" secondItem="RaU-2B-iym" secondAttribute="leading" constant="16" id="nEz-M0-2Or"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="WY0-ob-R8a"/>
                 </viewController>
