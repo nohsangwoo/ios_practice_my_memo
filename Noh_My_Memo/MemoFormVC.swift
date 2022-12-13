@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MemoFormVC: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     var subject: String!
     //    weak는 해당 변수의 라이프 사이클 규칙을 설정하는 구문이다(strong, weak이 존재한다)
     //    메모리 누수 현상이 발생할때 쉽게 메모리 확보를 할 수 있는 대상인지 아닌지를 판별한다.
@@ -18,8 +18,16 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate,UINavigation
     @IBOutlet weak var contents: UITextView!
     @IBOutlet weak var preview: UIImageView!
     
+    // 라이프 사이클중 하나인듯, 아마도 view가 로드되면 어떤 작업을 하라는 의미같다.
+    override func viewDidLoad() {
+        self.contents.delegate = self
+        // text view에 대한 델리게이트 패턴을 구현하기위한 작업
+        // 화면이 로드되면 특정 델리게이트 메소드가 자동으로 호출되도록 할 수 있다.
+    }
+    
     // 저장 버튼을 클릭했을 때 호출되는 메소드
     @IBAction func save(_ sender: Any) {
+        //       aasf
     }
     
     // 카메라 버튼을 클릭했을 때 호출되는 메소드
@@ -46,7 +54,30 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate,UINavigation
         self.present(picker, animated: false)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()        
+    
+    
+    
+    
+    // 사용자가 이미지를 선택하면 자동으로 이 메소드가 호출된다.
+    // 델리게이트 메소드는 정해져있는 이름이 있다. 구현시 이름과 형식을 정확하게 작성해 줘야한다.
+    func imagePickerController(_ picker: UIImagePickerController,didFinishPickingMediaWithInfo info:[UIImagePickerController.InfoKey:Any]){
+        // 선택된 이미지를 미리보기에 출력한다.
+        self.preview.image = info[.editedImage] as? UIImage
+        
+        // 이미지 피커 컨트롤러를 닫는다.
+        picker.dismiss(animated: false)
     }
+    
+    // 사용자가 텍스트 뷰에 뭔가를 입력하면 자동으로 이 메소드가 호출된다.
+    func textViewDidChange(_ textView: UITextView) {
+        // 내용의 최대 15자리까지 읽어 subject 변수에 저장한다.
+        let contents = textView.text as NSString
+        let length = ((contents.length>15) ? 15 : contents.length)
+        self.subject = contents.substring(with: NSRange(location: 0, length: length))
+        
+        // 네비게이션 타이틀에 표시한다.
+        self.navigationItem.title = self.subject
+    }
+    
 }
+

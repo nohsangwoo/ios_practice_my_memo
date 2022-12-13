@@ -149,17 +149,18 @@
             </objects>
             <point key="canvasLocation" x="139.69465648854961" y="4.9295774647887329"/>
         </scene>
-        <!--메모 작성-->
+        <!--MemoFormVC-->
         <scene sceneID="W4q-Lo-BTv">
             <objects>
-                <viewController id="hZR-rW-TjP" customClass="MemoFormVC" customModule="Noh_My_Memo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hZR-rW-TjP" userLabel="MemoFormVC" customClass="MemoFormVC" customModule="Noh_My_Memo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fBs-xt-fNL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lmV-og-DIh">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lmV-og-DIh" userLabel="contents">
                                 <rect key="frame" x="16" y="123" width="361" height="250"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <accessibility key="accessibilityConfiguration" identifier="contents" label="contents"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="fd8-kx-D4R"/>
                                 </constraints>
@@ -171,7 +172,7 @@
                                 <rect key="frame" x="16" y="388" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="bxg-w9-DeW"/>
-                                    <constraint firstAttribute="height" constant="250" id="jq3-sv-Fcl"/>
+                                    <constraint firstAttribute="height" constant="250" placeholder="YES" id="jq3-sv-Fcl"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -200,6 +201,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="contents" destination="lmV-og-DIh" id="9aA-cL-qL0"/>
                         <outlet property="preview" destination="KxT-Ga-t3R" id="hdo-g5-bqm"/>
                     </connections>
                 </viewController>
