@@ -70,8 +70,13 @@
                                         <constraint firstAttribute="trailing" secondItem="SfP-xW-nS9" secondAttribute="trailing" constant="20" symbolic="YES" id="wEf-bn-4xZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contents" destination="ttv-Vv-NVT" id="A66-lo-cJh"/>
+                                    <outlet property="regdate" destination="SfP-xW-nS9" id="zsn-ch-Yf9"/>
+                                    <outlet property="subject" destination="SPW-jh-XLW" id="liG-Me-VHY"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCellWithImage" rowHeight="80" id="9yz-lC-FLv">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCellWithImage" rowHeight="80" id="9yz-lC-FLv" customClass="MemoCell" customModule="Noh_My_Memo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="130" width="393" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9yz-lC-FLv" id="PKr-jP-wp3">
@@ -127,6 +132,12 @@
                                         <constraint firstAttribute="bottom" secondItem="Met-1o-iFb" secondAttribute="bottom" constant="20" symbolic="YES" id="zYc-MX-ka6"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contents" destination="VFo-Zc-SgL" id="B0u-n3-8VH"/>
+                                    <outlet property="img" destination="Met-1o-iFb" id="CPH-3w-pm7"/>
+                                    <outlet property="regdate" destination="KQb-5f-XTp" id="3Lu-6H-iZV"/>
+                                    <outlet property="subject" destination="XR9-aG-URR" id="VLN-Lq-GuZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
