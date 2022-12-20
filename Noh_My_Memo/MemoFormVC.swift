@@ -102,5 +102,7 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         self.navigationItem.title = self.subject
     }
     
+
+    
 }
 

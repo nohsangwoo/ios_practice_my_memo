@@ -55,4 +55,21 @@ class MemoListVC: UITableViewController {
         // (라이프 사이클 중 하나인것 같다, 이 경우 tableView가 렌더링 될때마다 최신화가 이루어져야하기때문에 이런짓을 한다..예컨데 수동 리렌더링이다.)
         self.tableView.reloadData()
     }
+    
+    
+    // 테이블 행을 선택했을때 호출되는 메소드. onClick과 비슷한 이벤트 리스너
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //
+        //      // ① memolist 배열에서 선택된 행에 맞는 데이터를 꺼낸다.
+        //      let row = self.appDelegate.memolist[indexPath.row]
+        //
+        //      // ② 상세 화면의 인스턴스를 생성한다.
+        //      guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MemoRead") as? MemoReadVC else {
+        //        return
+        //      }
+        //
+        //      // ③ 값을 전달한 다음, 상세 화면으로 이동한다.
+        //      vc.param = row
+        //      self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
