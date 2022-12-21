@@ -223,7 +223,7 @@
         <!--상세화면-->
         <scene sceneID="T78-Vc-UPK">
             <objects>
-                <viewController id="jNE-Aj-zQP" userLabel="상세화면" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoRead" id="jNE-Aj-zQP" userLabel="상세화면" customClass="MemoReadVC" customModule="Noh_My_Memo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="szy-jf-BY7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -265,6 +265,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="gOi-Xo-LCQ"/>
+                    <connections>
+                        <outlet property="contents" destination="B5I-Mj-Rbn" id="Hy2-ym-O7x"/>
+                        <outlet property="img" destination="Pt8-Lf-1di" id="KPC-ou-aLp"/>
+                        <outlet property="subject" destination="Ayj-7N-v7i" id="OqG-n7-yg7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJY-xT-6Hk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

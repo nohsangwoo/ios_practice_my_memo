@@ -59,17 +59,18 @@ class MemoListVC: UITableViewController {
     
     // 테이블 행을 선택했을때 호출되는 메소드. onClick과 비슷한 이벤트 리스너
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //
-        //      // ① memolist 배열에서 선택된 행에 맞는 데이터를 꺼낸다.
-        //      let row = self.appDelegate.memolist[indexPath.row]
-        //
-        //      // ② 상세 화면의 인스턴스를 생성한다.
-        //      guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MemoRead") as? MemoReadVC else {
-        //        return
-        //      }
-        //
-        //      // ③ 값을 전달한 다음, 상세 화면으로 이동한다.
-        //      vc.param = row
-        //      self.navigationController?.pushViewController(vc, animated: true)
+        
+        // ① memolist 배열에서 선택된 행에 맞는 데이터를 꺼낸다.
+        let row = self.appDelegate.memolist[indexPath.row]
+
+        // ② 상세 화면의 인스턴스를 생성한다.
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MemoRead") as? MemoReadVC else {
+            // 만약 MemoRead에 해당하는 Storyboard ID가 없으면 메소드의 실행을 종료합니다.
+            return
+        }
+    
+        // ③ 값을 전달한 다음, 상세 화면으로 이동한다.
+        vc.param = row
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
